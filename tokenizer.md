@@ -13,7 +13,7 @@ Please contact us to obtain your API token.
 Add the following header to all of your requests:
 
 ```
-Authorization: Bearer $API_TOKEN
+api-token: $API_TOKEN
 ```
 
 ## Assets
@@ -23,7 +23,7 @@ Authorization: Bearer $API_TOKEN
 ```sh
 curl "$API_URL/v1/orgs/$ORG_ID/assets" \
   -H 'Content-Type: application/json' \
-  -H "Authorization: Bearer $API_TOKEN" \
+  -H "api-token: $API_TOKEN" \
   --data-binary '{"name":"Octocat", "description":" }' \
 ```
 
@@ -55,7 +55,7 @@ List assets for an organization.
 ```sh
 curl "$API_URL/v1/orgs/$ORG_ID/assets" \
   -H 'Content-Type: application/json' \
-  -H "Authorization: Bearer $API_TOKEN" \
+  -H "api-token: $API_TOKEN" \
 ```
 
 Example Response
@@ -86,7 +86,7 @@ Example Response
 ```sh
 curl "$API_URL/v1/assets/$ASSET_ID" \
   -H 'Content-Type: application/json' \  
-  -H "Authorization: Bearer $API_TOKEN" \
+  -H "api-token: $API_TOKEN" \
 ```
 
 Example Response
